@@ -1,3 +1,4 @@
+import 'package:my_task/components/difficulty.dart';
 import 'package:flutter/material.dart';
 
 class Task extends StatefulWidget {
@@ -30,16 +31,30 @@ class _TaskState extends State<Task> {
           child: Container(
             height: 100,
             decoration: BoxDecoration(
-                color: Colors.yellow, borderRadius: BorderRadius.circular(4)),
+                color: Colors.grey[200], borderRadius: BorderRadius.circular(4)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
                   height: 100,
                   width: 72,
                   color: Colors.brown,
                 ),
-                Text(widget.name),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      width: 200,
+                      child: Text(widget.name,
+                          style: const TextStyle(
+                          fontSize: 24,
+                          overflow: TextOverflow.ellipsis)),
+                    ),
+                    Difficulty(widget.dificult),
+                  ],
+                ),
                 ElevatedButton(
                     onPressed: () {},
                     child: Container(
