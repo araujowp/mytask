@@ -32,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
           duration: Duration(milliseconds: 1000),
           child: ListView(
             children: <Widget>[
-              Task("Tomar café", "", 1),
+              Task("Levar os gemeos", "", 1),
               Task("estudar flutter", "", 3),
               Task("jogar clash", "", 1),
               Task("compras para almoço", "", 1),
