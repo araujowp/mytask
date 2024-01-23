@@ -47,9 +47,12 @@ class _TaskState extends State<Task> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Container(
-                      height: 100,
                       width: 72,
-                      color: Colors.brown,
+                      height: 100,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(4),
+                          child: Image.asset(widget.patchPicture, fit: BoxFit.cover,)
+                      ),
                     ),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
